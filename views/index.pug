@@ -1,0 +1,30 @@
+extends layout
+
+
+
+block content
+
+  h1.text-center #{title}
+  div.container
+
+    div.row
+      div.col-md-12
+        table.table.table-bordered.table-stripped
+          thead
+            tr
+              th File Name
+              th File Type
+              th Claim Name
+              th Channel Name
+              th Stream
+          tbody
+            each row in filesList
+              tr
+                td #{row.stream_name}
+                td #{row.mime_type}
+                td #{row.claim_name}
+                td #{row.channel_name}
+                td 
+                  iframe(src=row.streaming_url, title='W3Schools Free Online Web Tutorials')
+
+

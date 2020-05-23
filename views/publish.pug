@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+  div.container-fluid
+    div.row
+        div.col-md-8.col-md-offset-2
+          +panel(title,'primary') 
+            form(name="publish", method="post" , enctype='multipart/form-data')
+              div.form-group
+                label(for='email') File Name:
+                input.form-control(type='text', name='fileName')
+              div.form-group
+                label(for='email') Bid:
+                input.form-control(type='text', name='bid')
+              div.form-group
+                label(for='email') File:
+                input#file(type='file',name='imageupload')
+              button.btn.btn-primary(type='Submit') PUBLISH
+    
+    if uploadStatus.status
+      div.row
+        div.col-md-8.col-md-offset-2
+         +alert(uploadStatus.alert) #{uploadStatus.message}
+
