@@ -17,7 +17,7 @@
     "jade-bootstrap": "^1.0.14",
     "lbry": "^0.1.2",
     "lbry-nodejs": "^1.0.6",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "morgan": "^1.9.1",
     "multer": "^1.4.2",
     "pug": "2.0.0-beta11"
